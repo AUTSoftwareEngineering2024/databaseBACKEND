@@ -4,7 +4,7 @@ const Models = require("../models");
 const getUsers = (res) => {
   Models.User.findAll({})
     .then((data) => {
-      res.send({ result: 200, data: data });
+      res.send(data);
     })
     .catch((err) => {
       console.log(err);

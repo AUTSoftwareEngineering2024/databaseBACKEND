@@ -16,6 +16,6 @@ router.put('/:id', (req, res) => {
     })
     // matches DELETE requests to /api/users/123 (123 in id param)
 router.delete('/:id', (req, res) => {
-    Controllers.userController.deleteUser(req,)
+    Controllers.userController.deleteUser(req)
     })
 module.exports = router;

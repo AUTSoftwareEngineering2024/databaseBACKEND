@@ -1,8 +1,10 @@
 const express = require("express");
+var cors = require('cors')
 require("dotenv").config();
 const dbconnect= require("./dbconnect")
 const app = express();
 
+app.use(cors())
 // parse requests of content-type -
 app.use(express.json());
 app.get("/", (req, res) => {

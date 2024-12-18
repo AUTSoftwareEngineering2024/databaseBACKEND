@@ -10,4 +10,11 @@ Controllers.postController.getUsersPost(res);
 router.post('/create', (req, res) => {
 Controllers.postController.createPost(req.body, res)
 })
+router.put('/:id', (req, res) => {
+    Controllers.postController.updatePost(req, res)
+    })
+    // matches DELETE requests to /api/users/123 (123 in id param)
+router.delete('/:id', (req, res) => {
+    Controllers.postController.deletePost(req, res)
+    })
 module.exports = router;
